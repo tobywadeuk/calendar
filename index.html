@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #f8fafc;
+        color: #334155;
+      }
+      h1 {
+        text-align: center;
+        color: #1e293b;
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        font-weight: 200;
+      }
+      .calendar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 60px;
+      }
+      .day {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        transition: transform 0.2s ease;
+      }
+      .day:hover {
+        transform: translateY(-2px);
+      }
+      .day-header {
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #e2e8f0;
+        color: #1e293b;
+        font-size: 1.2em;
+        text-align: center;
+      }
+      .slot {
+        padding: 12px;
+        margin: 8px 0;
+        background-color: #f1f5f9;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 0.95em;
+        color: #475569;
+        border: 1px solid #e2e8f0;
+      }
+      .slot.booked {
+        background-color: #fee2e2;
+        border: 1px solid #fecaca;
+        color: #991b1b;
+      }
+      .week-header {
+        font-size: 1.8em;
+        margin: 40px 0 25px;
+        color: #1e293b;
+        text-align: center;
+        font-weight: 300;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+        }
+      }
+      .slot.booked {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Appointment Calendar</h1>
+
+    <!-- Week 1 -->
+    <h2 class="week-header">Week 1 [starting Mon 27 Jan]</h2>
+    <div class="calendar">
+      <div class="day">
+        <div class="day-header">Monday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot">3</div>
+        <div class="slot booked">4</div>
+        <div class="slot">5</div>
+      </div>
+      <div class="day">
+        <div class="day-header">Tuesday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot">3</div>
+        <div class="slot">4</div>
+        <div class="slot">5</div>
+      </div>
+      <div class="day">
+        <div class="day-header">Wednesday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot booked">3</div>
+        <div class="slot booked">4</div>
+        <div class="slot">5</div>
+      </div>
+    </div>
+
+    <!-- Week 2 -->
+    <h2 class="week-header">Week 2</h2>
+    <div class="calendar">
+      <div class="day">
+        <div class="day-header">Monday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot">3</div>
+        <div class="slot booked">4</div>
+        <div class="slot">5</div>
+      </div>
+      <div class="day">
+        <div class="day-header">Tuesday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot">3</div>
+        <div class="slot">4</div>
+        <div class="slot">5</div>
+      </div>
+      <div class="day">
+        <div class="day-header">Wednesday</div>
+        <div class="slot">1</div>
+        <div class="slot">2</div>
+        <div class="slot booked">3</div>
+        <div class="slot">4</div>
+        <div class="slot">5</div>
+      </div>
+    </div>
+  </body>
+</html>
